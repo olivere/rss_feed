@@ -3,7 +3,7 @@
 require 'rss_feed'
 require 'test/unit'
 require 'open-uri'
-require 'fakeweb'
+require 'webmock/test_unit'
 
 class TestOpen < Test::Unit::TestCase
   include RSSFeed
@@ -19,7 +19,7 @@ class TestOpen < Test::Unit::TestCase
   end
 
   def test_open_from_the_internets
-    FakeWeb.register_uri(:get, "http://example.com/rss.xml", :body => VALID_XML)
+    stub_request(:get, "http://example.com/rss.xml").to_return(:status => 200, :body => VALID_XML)
     assert_not_nil channel = RSSChannel.open(open("http://example.com/rss.xml"))
   end
 

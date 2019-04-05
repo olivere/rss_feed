@@ -3,8 +3,8 @@
 require 'rss_feed'
 require 'test/unit'
 require 'open-uri'
-require 'fakeweb'
 require 'shoulda'
+require 'webmock/test_unit'
 
 class TestFeed < Test::Unit::TestCase
   include RSSFeed
