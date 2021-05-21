@@ -1,6 +1,9 @@
-source :rubygems
+source 'http://rubygems.org'
+
+gemspec
 
 group :development do
-  gem 'webmock', "~> 3.8.3"
-  gem 'shoulda', '~> 3.6.0'
+  gem 'webmock', "~> 3.13.0"
+  gem 'shoulda', '~> 4.0.0'
+  gem 'test-unit', '~> 3.3.6'
 end
