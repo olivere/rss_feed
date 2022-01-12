@@ -7,7 +7,7 @@
 # This library is for parsing RSS feeds.
 
 module RSSFeed
-  VERSION = "0.3.1"
+  VERSION = "0.3.2"
 
   # OpenSearch 1.1 Draft 4 namespace
   NS_OPENSEARCH_11 = "http://a9.com/-/spec/opensearch/1.1/"

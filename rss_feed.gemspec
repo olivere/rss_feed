@@ -14,13 +14,13 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = extra_rdoc_files
   s.homepage = 'http://github.com/olivere/rss_feed'
   s.rdoc_options = ['--charset=UTF-8']
-  s.required_ruby_version = '>= 2.6'
+  s.required_ruby_version = '>= 2.7'
   s.require_paths = ['lib']
   s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.files = `git ls-files -- {bin,lib,spec}/*`.split("\n") + extra_rdoc_files
   s.test_files = `git ls-files -- {spec}/*`.split("\n")
 
-  s.add_dependency("nokogiri", "~> 1.11.7")
+  s.add_dependency("nokogiri", "~> 1.12.5")
   s.add_development_dependency("bundler", "~> 2.2.22")
   s.add_development_dependency("rdoc", "~> 6.3.2")
   s.add_development_dependency("rake", "~> 13.0.3")
