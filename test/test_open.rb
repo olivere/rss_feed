@@ -20,7 +20,7 @@ class TestOpen < Test::Unit::TestCase
 
   def test_open_from_the_internets
     stub_request(:get, "http://example.com/rss.xml").to_return(:status => 200, :body => VALID_XML)
-    assert_not_nil channel = RSSChannel.open(URI.open("http://example.com/rss.xml"))
+    assert_not_nil channel = RSSChannel.open(URI.open("http://example.com/rss.xml").read)
   end
 
   VALID_XML = <<EOF
